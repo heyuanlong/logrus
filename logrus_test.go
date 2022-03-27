@@ -782,7 +782,7 @@ func TestReportCallerOnTextFormatter(t *testing.T) {
 
 func TestSetReportCallerRace(t *testing.T) {
 	l := New()
-	l.Out = ioutil.Discard
+	l.Out = os.Stdout
 	l.SetReportCaller(true)
 
 	var wg sync.WaitGroup
